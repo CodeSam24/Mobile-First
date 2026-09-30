@@ -10,10 +10,10 @@
 
 .site-header { grid-area: header; }
 .site-main { grid-area: main; } 
-.site-aside { grid-area: aside; }
+.site-aside-left { grid-area: aside; }
 .site-footer { grid-area: footer; }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
     .page {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
