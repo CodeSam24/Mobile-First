@@ -4,21 +4,109 @@
     grid-template-areas: 
         "header"
         "main"
-        "aside"
+        "aside-left"
+        "aside-right"
         "footer";
 }
 
-.site-header { grid-area: header; }
-.site-main { grid-area: main; } 
-.site-aside-left { grid-area: aside; }
-.site-footer { grid-area: footer; }
+.site-aside-left {  
+    grid-area: aside-left;
+    display: flex;
+    flex-direction: column;
+    background-color: #EC5252;
+    border: solid 2px #FCC212; 
+}
+
+.site-aside-right {
+    grid-area: aside-right;
+    display: flex;
+    flex-direction: column;
+    background-color: #EC5252;
+    border: solid 2px #FCC212; 
+}
+
+
+.site-footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background-color: #EC5252;
+    border: solid 2px #FCC212; 
+    color: #FDFDFD;
+}
+
+address{
+    color:#FDFDFD;
+}
+
+p, h1, h2, h3{
+    font-size: medium;
+    font-family: "Comic Neue", "Comic Sans MS", "Comic Sans", cursive;
+    color: #FDFDFD;
+}
+
+body{
+    background-color: #121D1D;
+}
+
+.site-nav, a{
+    color: #4C69F6;
+}
+
+.site-header{
+    grid-area: header;
+    display: flex;
+    background-color: #EC5252;
+    border: solid 2px #FCC212;
+}
+
+.site-main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: #EC5252;
+    border: solid 2px #FCC212;
+}
+
+ /* .product-img{
+    height: 65%;
+    width: 99%;
+    border: solid 2px #FDFDFD;
+}  */
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    margin: 6px;
+}
+
+.product-card{
+    margin: 4px;
+    padding: 0px;
+    border: solid 2px #121D1D;
+    text-align: center;
+}
+
+.hide-layer{ 
+    /* height: 40%;
+    width: 99%; */
+    overflow: hidden;
+    /* border: solid 2px #FDFDFD; */
+}
+
+.product-button{
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 @media (min-width: 1024px) {
     .page {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: 
-            "header header"
-            "main aside"
-            "footer footer";
+            "header header header"
+            "aside-left main aside-right"
+            "footer footer footer";
     }
 }
